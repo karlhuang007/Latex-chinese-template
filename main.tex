@@ -1,0 +1,127 @@
+\documentclass{ctexart}
+\usepackage{cite}
+\usepackage{amsmath}	% 使用数学公式
+\usepackage{graphicx}	% 插入图片/PDF/EPS 等图像
+\usepackage{subfigure}	% 使用子图像或者子表格
+\usepackage{geometry}	% 设置页边距
+\usepackage{fancyhdr}	% 设置页眉页脚
+\usepackage{setspace}	% 设置行间距
+\usepackage{hyperref}	% 让生成的文章目录有链接，点击时会自动跳转到该章节
+\usepackage{url}
+\usepackage{caption2}
+% [geometry] 设置页边距
+\geometry{top=2.6cm, bottom=2.6cm, left=2.45cm, right=2.45cm, headsep=0.4cm, foot=1.12cm}
+% 设置行间距为 1.5 倍行距
+\onehalfspacing
+% 设置页眉页脚
+\pagestyle{fancy}
+%\lhead{左头标}
+%\chead{\today}
+%\rhead{152xxxxxxxx}
+% \lfoot{}
+% \cfoot{\thepage}
+% \rfoot{}
+\cfoot{\textbf{\pagemark}}
+% Other classes are available too:
+% \documentclass{ctexrep}
+% \documentclass{ctexbook}
+% \documentclass{ctexbeamer}
+
+%% You can change the font if necessary.
+% \setCJKmainfont{BabelStone Han}
+% \setCJKsansfont{Noto Sans CJK SC}
+\title{\centering\huge{\heiti Latex报告模板}}
+\author{\small{\kaishu 你的名字}\\[2pt]
+}
+
+\begin{document}
+\maketitle
+% \title{}
+
+\tableofcontents
+
+
+
+\newpage
+\section{Latex编译环境}
+\begin{itemize}
+\item 最方便在线编辑：https://www.overleaf.com/
+\item 如果使用命令行方式进行编译，则需打开Windows 命令提示符或者*nix 的终端，在源代码所在的目录下输入：
+
+pdflatex main.tex\\
+或者\\
+xelatex main.tex\\
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\section{中国古代史}
+\begin{itemize}
+\item 原始社会
+\item 奴隶社会
+\item 封建社会的确立和初步发展——战国、秦、汉
+\item 封建国家的分裂和民族大融合——三国、两晋、南北朝
+\item 封建社会的繁荣——隋、唐
+\item 民族融合的进一步加强和封建经济的继续发展——五代、辽、宋、夏、金、元
+\item 统一的多民族国家的巩固和封建制度的逐渐衰落（鸦片战争以前）
+\end{itemize}
+
+
+
+\section{中国近代史}
+\begin{enumerate}
+\item 鸦片战争
+\item 太平天国运动
+\item 清朝后期资本主义的产生和民族危机的加深
+\item 戊戌变法和义和团运动
+\item 辛亥革命和清朝的灭亡
+\item 中华民国初期北洋军阀的统治
+\item 五四运动和中国共产党的创立
+\item 第一次国内革命战争
+\item 第二次国内革命战争
+\item 抗日战争
+\item 第三次国内革命战争
+\end{enumerate}
+
+
+
+
+\section{图片}
+
+图片可以这么放：
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{image_part_002.jpg}
+\caption{一张图片}
+\label{fig:latex}
+\end{figure}
+
+
+\section{数学公式}
+数学公式可以用Mathpix自动截取
+\begin{equation}
+\label{eq:sigmoid}
+\centering{f(x) = \frac{1}{1 + e^{-x}}}.
+\end{equation}
+
+\section{表格}
+表格可以这么写:
+
+\begin{tabular}{|p{8em}|p{8em}|p{24em}|} %l(left)居左显示 r(right)居右显示 c居中显示 p{}单元格宽度固定为⟨width⟩，可自动折行
+\hline 
+参数名&类型&含义\\
+\hline  
+number & int & 计数\\
+\hline 
+time &double&时间\\
+\hline 
+\end{tabular}
+
+
+\end{document}
